@@ -1,6 +1,6 @@
 ﻿using Catalog.API.Entities;
 
-namespace Catalog.API.Repositories
+namespace Catalog.API.Repositories.Interfaces
 {
   public interface IProductRepository
   {
@@ -10,7 +10,7 @@ namespace Catalog.API.Repositories
 
     Task<IEnumerable<Product>> GetProductByName(string name);
 
-    Task<IEnumerable<Product>> GetProductBycategory(string categoryName);
+    Task<IEnumerable<Product>> GetProductByCategory(string categoryName);
 
     Task CreateProduct(Product product);
 

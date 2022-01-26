@@ -1,5 +1,6 @@
 ﻿using Catalog.API.Data;
 using Catalog.API.Entities;
+using Catalog.API.Repositories.Interfaces;
 using MongoDB.Driver;
 
 namespace Catalog.API.Repositories
@@ -38,7 +39,7 @@ namespace Catalog.API.Repositories
                       .FirstOrDefaultAsync();
     }
 
-    public async Task<IEnumerable<Product>> GetProductBycategory(string categoryName)
+    public async Task<IEnumerable<Product>> GetProductByCategory(string categoryName)
     {
       FilterDefinition<Product> filter = Builders<Product>.Filter.Eq(p => p.Category, categoryName);
 
