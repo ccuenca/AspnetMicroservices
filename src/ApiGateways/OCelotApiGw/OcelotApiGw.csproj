@@ -3,8 +3,20 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+		<UserSecretsId>08e0dd35-eca9-4bc7-b53e-6f4dfb088b73</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..</DockerfileContext>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Ocelot" Version="18.0.0"/>
+	  <Compile Remove="net6.0\**" />
+	  <Content Remove="net6.0\**" />
+	  <EmbeddedResource Remove="net6.0\**" />
+	  <None Remove="net6.0\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+		<PackageReference Include="Ocelot" Version="18.0.0" />
+		<PackageReference Include="Ocelot.Cache.CacheManager" Version="18.0.0" />
 	</ItemGroup>
 </Project>
