@@ -25,10 +25,10 @@
             }
         },
         {
-            "name": ".NET Core Launch (Discount GRPC)",
+            "name": ".NET Core Launch (Discount.GRPC)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "build Discount.GRPC",
             "program": "${workspaceFolder}/src/Services/Discount/Discount.Grpc/bin/Debug/net6.0/Discount.Grpc.dll",
             "args": [],
             "cwd": "${workspaceFolder}/src/Services/Discount/Discount.Grpc/",
